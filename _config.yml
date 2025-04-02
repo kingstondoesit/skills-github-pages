@@ -1,1 +1,54 @@
+title: My blog
+author: kingstondoesit
+email: kingstondoesit@gmail.com
+description: >-
+  Write an awesome description for your new site here.
+  You can edit this line in _config.yml. It will appear in your document head (meta description) and in your feed.xml site description.
+
 theme: minima
+# Minima 3.0 is a Jekyll theme used as the default theme for GitHub Pages. You can find out more information at https://github.com/jekyll/minima
+
+# Configuration settings for the theme
+# minima:
+#   skin: auto # Dark, light, auto
+
+# Social media links
+# twitter_username: your_twitter_handle
+github_username: your_github_username
+# mastodon:
+#   username: your_mastodon_instance
+#   instance: your_mastodon_instance
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Optional Front Matter Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author: Your Name
+      permalink: /:year/:month/:day/:title/
+
+# Enable collection support.
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
